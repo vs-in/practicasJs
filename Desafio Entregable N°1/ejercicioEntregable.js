@@ -15,8 +15,21 @@ class Usuario {
 
   addMascota = (nombre_mascota) => this.mascotas.push(nombre_mascota);
 
-  countPets = () =>
+  countMascota = () =>
     console.log(`El usuario ${this.nombre} tiene ${this.mascotas.length} mascotas.`)
+
+    addLibro = (nombre_libro, autor) => {
+        const libro = {
+            name: `${nombre_libro}`,
+            autor: `${autor}`,
+        }
+
+        this.libros.push(libro)
+        
+
+    }
+
+  
 
 }
 
@@ -34,5 +47,12 @@ usuario_uno.addMascota("Polinesia")
 
 console.log(usuario_uno.mascotas);
 
-usuario_uno.countPets()
+usuario_uno.countMascota()
+
+// # Adding books to array of objects.
+usuario_uno.addLibro("El hombre mas rico de babilonia", "George Samuel Clason")
+usuario_uno.addLibro("El Negociador", "Arturo Elias Ayub")
+
+console.log(usuario_uno.libros);
+
 
